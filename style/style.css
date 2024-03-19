@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+body {
+    font-family:'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header{
+    display: inline;
+  }
+
+  h2, h3 {
+    color: #00a2c6;
+  }
+
+  footer {
+    padding: 20px;
+    color: white;
+    background-color: #00a2c6;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  nav {
+    background-color: #00a2c6;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+ }
+
+  .menu-icon{
+    /* background-color: tomato; */
+    font-size: 54px;
+    display: none;
+  }
+
+  .profile-icon{
+    /* background-color: red; */
+    display: flex;
+    /* align-items: center; */
+    font-size: 54px;
+  }
+
+  nav ul{
+    display: flex;
+    padding-inline: 4rem;
+    gap: 2rem;
+  }
+
+  nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+  }
+
+  nav a:hover {
+    font-weight: bold;
+  }
+
+  .profile header {
+    text-align: center;
+  }
+
+  .featured-image{
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .profile img{
+    width: 200px;
+  }
+
+  .card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 40px;
+    /* margin-top: 20px; */
+  }
+
+  .jumbotron{
+    font-size: 20px;
+    padding: 60px;
+    background-color: #00c8eb;
+    text-align: center;
+    color: white;
+  }
+
+  nav li{
+    /* display: inline; */
+    /* margin-right: 20px; */
+    list-style-type: none;
+  }
+ 
+ main {
+  padding: 20px;
+  /* overflow: auto; */
+  display: flex;
+  gap: 1.5rem;
+}
+
+#content{
+  flex: 5;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+aside{
+  flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-flow: column nowrap;
+  }
+
+  main aside {
+    align-self: center;
+  }
+}
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+  nav{
+    flex-wrap: wrap;
+  }
+
+  nav ul {
+    /* display: none; */
+    flex-direction: column;
+    /* justify-content: center; */
+  }
+
+  nav ul.hidden{
+    display: none;
+  }
+
+  .menu-icon{
+    display: flex;
+    /* align-items: center; */
+  }
+
+  main aside {
+    align-self: stretch;
+  }
+}
+
